@@ -1,3 +1,4 @@
+import 'package:car_booking/Widgets/Textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -20,30 +21,13 @@ class LoginPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.white
               ),
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    decoration: const BoxDecoration(
-                      border: Border(bottom: BorderSide(color: Colors.grey),),
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintStyle: TextStyle(color: Colors.grey.withOpacity(.8)),
-                        hintText: "Email or Phone number"
-                      ),
-                    ),
+              child: const Column(
+                children:  [
+                   CustomTextfield(
+                    hintText: "Email or Phone number",
                   ),
-                  Container(
-                    decoration: const BoxDecoration(
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintStyle: TextStyle(color: Colors.grey.withOpacity(.8)),
-                        hintText: "Password"
-                      ),
-                    ),
+                  LastTextField(
+                    hintText: "Password",
                   ),
                 ],
               ),
@@ -67,3 +51,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
