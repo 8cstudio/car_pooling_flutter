@@ -1,6 +1,5 @@
-import 'package:car_booking/Widgets/CustomText.dart';
-import 'package:car_booking/Widgets/MyElevatedButton.dart';
-import 'package:car_booking/Widgets/Textfield.dart';
+// ignore_for_file: file_names
+
 import 'package:car_booking/screens/SignUp/components/SignUpForm.dart';
 import 'package:flutter/material.dart';
 class SignUp extends StatelessWidget {
@@ -12,7 +11,7 @@ class SignUp extends StatelessWidget {
       backgroundColor: const Color.fromRGBO(3, 9, 23, 1),
       body: Container(
         padding: const EdgeInsets.all(30),
-        child: SignUpForm() ),
+        child: const SignUpForm() ),
     );
 
   }

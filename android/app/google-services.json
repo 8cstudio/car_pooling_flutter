@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708701998550",
+    "project_id": "car-pooling-app-74a3f",
+    "storage_bucket": "car-pooling-app-74a3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708701998550:android:b5426d72f3f9ef2ff42877",
+        "android_client_info": {
+          "package_name": "com.example.car_booking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDunVYK6DlWX6la-FEY0BPYGvTQ3nKtwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

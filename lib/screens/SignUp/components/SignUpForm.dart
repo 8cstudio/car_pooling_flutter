@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:car_booking/constants.dart';
 import 'package:car_booking/screens/SignIn/LoginPage.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +20,18 @@ class _SignUpFormState extends State<SignUpForm> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Center(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 70),
+            child: Container(
+              height: 100,
+              width: 100,
+              decoration: const BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/images/logo.png"),),
+              ),
+            ),
+          ),
+        ),
             const Text(
               "Sign Up",
               style: TextStyle(
@@ -35,6 +49,7 @@ class _SignUpFormState extends State<SignUpForm> {
               child: const SingleChildScrollView(scrollDirection: Axis.vertical,
                 child: Column(
                   children: [
+                    
                     CustomTextfield(
                       hintText: "Full Name",
                     ),
@@ -45,8 +60,7 @@ class _SignUpFormState extends State<SignUpForm> {
               
                      CustomTextfield(
                       hintText: "Email or Phone number",
-                    ),                  SizedBox(height: 10,),
-              
+                    ),                  SizedBox(height: 10,),          
                      CustomTextfield(
                       hintText: "Pasword",
                     ),
@@ -77,7 +91,7 @@ class _SignUpFormState extends State<SignUpForm> {
             const CustomText(text: "Already have any account?", color: appColorWhite,),
             GestureDetector(
               onTap: () {
-                nextScreenReplacement(context, LoginPage());
+                nextScreenReplacement(context, const LoginPage());
               },
               child: const CustomText(
                 text: ' SignIn Here',
