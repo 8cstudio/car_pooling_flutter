@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class CustomText extends StatelessWidget {
   final String text;
   final Color? color;
-  const CustomText({super.key, required this.text, this.color});
+  final double? fontsize;
+  const CustomText({super.key, required this.text, this.color, this.fontsize});
 
   @override
   Widget build(BuildContext context) {
-    return  Text( text, style: TextStyle(color: color ),);
+    return  Text( text, style: TextStyle(color: color , fontSize: fontsize),);
   }
 }

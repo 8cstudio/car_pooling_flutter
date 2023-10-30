@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-const Color backgroundColor2 = Color(0xFF17203A);
-const Color appColorWhite = Color(0xFFF2F6FF);
-const Color backgroundColorDark = Color(0xFF25254B);
-const Color shadowColorLight = Color(0xFF4A5367);
-const Color shadowColorDark = Colors.black;
+
+const Color appColorWhite = Color(0xFFFFFFFF);
+const Color appColorBlack = Colors.black;
+const Color appColorYellow = Colors.amberAccent;
+
+const Color appColorBlue = Color(0xFF4448FF);
+const Color appColorGrey = Color.fromARGB(255, 119, 119, 126);
+
 /////////////////////////////////
 void nextScreen(context, page) {
   Navigator.push(context, MaterialPageRoute(builder: ((context) => page)));

@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 
-import 'package:car_booking/constants.dart';
+import 'package:car_booking/constants/constants.dart';
 import 'package:car_booking/screens/SignIn/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:car_booking/Widgets/CustomText.dart';

@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 
-import 'package:car_booking/constants.dart';
+import 'package:car_booking/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class MyElevatedButton extends StatelessWidget {
@@ -32,7 +32,7 @@ class MyElevatedButton extends StatelessWidget {
       height: height,
       
       decoration: BoxDecoration(
-        color: shadowColorLight,
+        color: appColorGrey,
         
         // gradient: gradient,
         borderRadius: borderRadius,
