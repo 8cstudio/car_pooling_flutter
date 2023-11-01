@@ -1,20 +1,29 @@
 import 'package:car_booking/Widgets/CustomText.dart';
 import 'package:car_booking/Widgets/Textfield.dart';
 import 'package:car_booking/constants/constants.dart';
+import 'package:car_booking/screens/Home/components/Drawer.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Home extends StatefulWidget {
+   const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  // ignore: non_constant_identifier_names
+  int no_of_person = 0;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: appColorGrey,
+      backgroundColor: appColorYellow,
       appBar: AppBar(
         title: const Text("Book ride"),
         centerTitle: true,
         backgroundColor: appColorYellow,
-
         // leading: const Icon(Icons.safety_check),
         actions: [
           IconButton(
@@ -77,16 +86,32 @@ class Home extends StatelessWidget {
                             width: 1,
                             color: appColorGrey,
                           ),
-                          const Padding(
-                            padding: EdgeInsets.only(right: 30),
+                           Padding(
+                            padding: const EdgeInsets.only(right: 30),
                             child: SizedBox(
                               height: 60,
                               width: 70,
                               // color: appColorYellow,
-                              child: LastTextField(
-                                readOnly: true,
-                                hintText: "1",
-                                prefixIcon: Icon(Icons.person),
+                              child: GestureDetector(
+                                onTap: (){showModalBottomSheet(
+                                  
+                                  
+                                  context: context, builder: (_){
+                                  return const SizedBox(
+                                    height: 300,
+                                    // color: appColorBlue,
+                                    child: Row(children: [
+                                      CircleAvatar(
+                                        radius: 40,
+                                        child: CustomText(text: "-",fontsize: 100,)),
+                                      CustomText(text: "  1  ",fontsize: 100,),
+                                      CircleAvatar(
+                                        radius: 40,
+                                        child: Icon(Icons.add, size: 50,))
+                                    ],),
+                                  );
+                                });},
+                                child: SizedBox(child: Text("$no_of_person"),)
                               ),
                             ),
                           ),
@@ -127,86 +152,4 @@ class Home extends StatelessWidget {
   }
 }
 
-class DrawerWidget extends StatelessWidget {
-  const DrawerWidget({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: appColorWhite.withOpacity(0.2),
-      child: const Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-             SizedBox(height: 40,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  
-                  radius: 70,
-                  child: Icon(
-                    Icons.person,
-                    size: 90,
-                  ),
-                ),
-              ],
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 200,
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 150,
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 200,
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 100,
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 150,
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 200,
-            ),
-            Divider(),
-            ShimmerContainerEffect(
-              width: 200,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ShimmerContainerEffect extends StatelessWidget {
-  final double? width;
-  const ShimmerContainerEffect({
-    super.key,
-    this.width,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: 30,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),
-        color: appColorGrey,
-      ),
-    );
-  }
-}
